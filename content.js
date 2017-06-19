@@ -47,11 +47,10 @@
 
         //add highlight to button under mousecursor, remove others
         $menu.find(".unity-menu-item").mouseenter(function() {
-            if (!$(this).hasClass("active")) {
-                $(this).addClass("active");
-
+            if (!$(this).hasClass("active")) {               
                 var oCurrentlySelectedButton = $menu.find(".active");
                 $(oCurrentlySelectedButton).removeClass("active");
+                $(this).addClass("active");
             }
         })
 
