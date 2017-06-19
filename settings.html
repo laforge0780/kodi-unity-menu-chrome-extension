@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kodi Unity Style Menu Settings</title>
+    <script src="settings.js" type="text/javascript"></script>
+    <link href="settings.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="form-body">
+      <h2>Kodi Unity Style Menu Settings</h2>
+
+      <div class="form-group">
+          <input id="useWhiteList" type="checkbox"> <label for="useWhiteList">Use Whitelist?</label>
+          <p class="help-block">Use a 'whitelist' to a define a list of websites you want the extension to run on. If no whitelist is used the extension will run on all sites.</p>
+      </div>
+	  
+	  <div id="whiteList-form-group">
+		  <div class="form-group">
+			  <label for="whiteList">Define A Whitelist</label> 
+			  <textarea class="form-control" id="whiteList" rows="3" placeholder="www.stan.com.au,www.netflix.com"></textarea>
+			  <p class="help-block">List the website(s) that the menu will appear on separated by a comma. Enter the hostname only, eg <i>www.netflix.com</i>, not <i><s>https://www.netflix.com/au</s></i></p>
+		  </div>
+	  </div>
+
+      <div class="form-group">
+          <label for="menuColour">Menu Colour</label> <input type="text" class="form-control" id="menuColour" placeholder="00CC00">
+          <p class="help-block">Set the menu colour as a hexadecimal value: AABBCC (R|G|B) .</p>
+      </div>
+	  
+	  <button id="savePrefs" type="button">Save Settings</button> <button id="restoreDefaults" type="button">Restore Default Settings</button>
+  </div>
+
+  <p><small>This extension is designed to compliment the excellent <a target="_blank" href="https://forum.kodi.tv/showthread.php?tid=238712">Unity</a> skin for <a target="_blank" href="https://kodi.tv/">Kodi</a>, when launching chrome in fullscreen on a TV or dedicated media PC.</small></p>
+</body>
+</html>
