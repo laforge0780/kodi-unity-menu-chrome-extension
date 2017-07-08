@@ -2,6 +2,8 @@
     text-align: left;
     color: black;
     font-size: 20px;
+    line-height: 1.4em;
+    box-sizing: border-box;
 }
 
 .unity-menu-outer a:hover {
@@ -12,8 +14,8 @@
 .unity-menu-outer {
     position: fixed;
     top: 0;
-    left: -375px;
-    width: 375px;
+    left: -295px;
+    width: 295px;
     z-index: 99999999999999999;
     height: 100%;
     padding-right: 20px;
@@ -22,7 +24,6 @@
 .action-exit-btn, .action-fullscreen-btn {
     font-family: 'Roboto', sans-serif;
     padding: 10px;
-    width: 350px;
     font-weight: 100;
     color: #808080;
 }
