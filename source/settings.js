@@ -1,6 +1,7 @@
 function getDefaultPrefs() {
     return {
         "bUseWhitelist": false,
+        "bMouseTrigger": true,
         "aWhitelist": ["www.stan.com.au"],
         "sMenuColour": "E51C23"
     };
@@ -18,6 +19,7 @@ function resetDefaultPrefs() {
 
 function setFormValues(settings) {
     document.getElementById("useWhiteList").checked = settings.bUseWhitelist;
+    document.getElementById("useMouseTrigger").checked = settings.bMouseTrigger;
     document.getElementById("whiteList").value = settings.aWhitelist.join(",");
     document.getElementById("menuColour").value = settings.sMenuColour;
 
@@ -28,6 +30,7 @@ function getFormValues() {
     var settings = {};
 
     settings.bUseWhitelist = document.getElementById("useWhiteList").checked;
+    settings.bMouseTrigger = document.getElementById("useMouseTrigger").checked;
     settings.aWhitelist = document.getElementById("whiteList").value.split(",");
     settings.sMenuColour = document.getElementById("menuColour").value;
 
@@ -112,7 +115,6 @@ window.onload = function() {
     document.getElementById("savePrefs").onclick = function() {
         savePrefs();
     };
-
     document.getElementById("useWhiteList").onchange = function() {
         setWhiteListVisibility();
     };

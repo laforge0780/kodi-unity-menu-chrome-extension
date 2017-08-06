@@ -4,7 +4,7 @@
     "name": "Kodi Unity skin lookalike menu",
     "short_name": "Kodi Unity Menu",
     "description": "This extension creates a side menu in the style of the unity skin for Kodi. For use when spawning fullscreen chrome from Kodi. This extension was created by a user of Kodi and the Unity skin and has nothing to do with the original authors.",
-    "version": "0.9.5",
+    "version": "1.0.0",
     "icons": {
         "16": "icon.png",
         "48": "icon-48.png",

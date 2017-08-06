@@ -36,7 +36,7 @@
         var $menu = $(sHTML);
         setMenuColour(oSettings.sMenuColour);
 
-        //mouse events
+       
         $menu.find(".action-exit-btn").click(function() {
             closeChromeWindow();
         });
@@ -44,7 +44,8 @@
         $menu.find(".action-fullscreen-btn").click(function() {
             toggleChromeFullScreen();
         });
-
+       
+       //mouse events
         //add highlight to button under mousecursor, remove others
         $menu.find(".unity-menu-item").mouseenter(function() {
             if (!$(this).hasClass("active")) {               
@@ -53,9 +54,9 @@
                 $(this).addClass("active");
             }
         })
-
+        
         $menu.mouseenter(function() {
-            if (bIsAnimating) {
+            if (bIsAnimating || !oSettings.bMouseTrigger) {
                 return;
             }
             bIsAnimating = true;
@@ -67,7 +68,7 @@
         });
 
         $menu.mouseleave(function() {
-            if (bIsAnimating) {
+            if (bIsAnimating || !oSettings.bMouseTrigger) {
                 return;
             }
             bIsAnimating = true;
@@ -186,6 +187,7 @@
     function loadSavedSettings() {
         chrome.storage.sync.get({
             "bUseWhitelist": false,
+            "bMouseTrigger" : true,
             "aWhitelist": ["www.stan.com.au"],
             "sMenuColour": "E51C23"
         }, function(data) {
